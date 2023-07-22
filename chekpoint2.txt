@@ -1,0 +1,73 @@
+FUNCTION dot_product(var v1,V2:ARRAY_OF_INTEGER):Integer
+ var 
+   ps:INTEGER:=0
+
+ begin
+ if(v1.lengh==v2.lengh) then
+  FOR i from 0 to v1.lengh step 1 do 
+   ps+=v1[i]*v2[i]
+  end_for
+ end_if
+ return ps;
+end;
+algorithme vecteur 
+var 
+v1,V2:ARRAY_OF_INTEGER
+
+begin 
+if dot_product(v1,V2)==0 then
+ write ("deux vecteur sont  orthogonaux ")
+else 
+write("deux vecteur ne sont pas  orthogonaux ")
+end; 
+ 
+
+2eme tache
+
+procedire echange(m,n:integer)
+var aux;integer
+ aux:integer;
+begin
+ aux:=m;
+ m:=n;
+ n:=aux
+
+prcedure tri(t:tab)
+var 
+ j,i:integer;
+begin
+for i from 1 to tab.lengh-1 step 1 do 
+ j:=i
+  while (j>0||tab[j-1]>tab[j])then
+    echange(tab[j-1],tab[j]);
+    j+=1;
+  end_while
+end_for
+
+procedure inserer(n:integer, t:tab)
+var 
+i:integer:=0
+v,aux,j:integer
+begin
+while((t[i]<n)&&(n<t[i+1]))then
+ i+=1;
+end_while;
+aux:=t[i+1];
+t[i+1]:=n
+j:=i+2
+delmnt:=t[tab.length]
+while(j<tab.length)then
+ v:=t[j];
+ t[j]:=aux;
+ aux:=t[j+1];
+ j+=1;
+ 
+end_while
+t[tab.length+1]:=delement;
+end-inserer
+
+ 
+
+
+
+
